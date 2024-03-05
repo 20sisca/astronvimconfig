@@ -45,6 +45,11 @@ return {
     -- ["JJ"] = { "<esc>"},
     -- ["KJ"] = { "<esc>"},
   },
+  v = {
+    -- setting a mapping to false will disable it
+    ["<F5>"] ={":w !clip.exe<CR><CR>"},
+    -- ["<esc>"] = false,
+  },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
