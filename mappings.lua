@@ -7,16 +7,33 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-    [":"] = {";"},
-    [";"] = {":"},
+    [":"] = { ";" },
+    [";"] = { ":" },
     ["<bs>"] = { "<c-^>", desc = "Go to previous buffer" },
-    ["<C-d>"] = {"<C-d>zz"},
-    ["<C-u>"] = {"<C-u>zz"}, 
-    ["n"] = {'nzzzv'},
-    ["N"] = {'Nzzzv'},
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
+    ["n"] = { "nzzzv" },
+    ["N"] = { "Nzzzv" },
+    -- -- Show help actions with telescope
+    --
+    -- ["<leader>cch"] = {
+    --   function()
+    --     local actions = require "CopilotChat.actions"
+    --     require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+    --   end,
+    --   desc = "CopilotChat - Help actions",
+    -- },
+    -- -- Show prompts actions with telescope
+    -- ["<leader>ccp"] = {
+    --   function()
+    --     local actions = require "CopilotChat.actions"
+    --     require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+    --   end,
+    --   desc = "CopilotChat - Prompt actions",
+    -- },
     s = {
-      require('substitute').operator,
-      noremap =true,
+      require("substitute").operator,
+      noremap = true,
     },
     -- navigate buffer tabs with `H` and `L`
     L = {
@@ -43,15 +60,15 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
-  i = {      
+  i = {
     -- ["kj"] = { "<esc>"},
-    ["JK"] = { "<esc>"},
+    ["JK"] = { "<esc>" },
     -- ["JJ"] = { "<esc>"},
     -- ["KJ"] = { "<esc>"},
   },
   v = {
     -- setting a mapping to false will disable it
-    ["<F5>"] ={":w !clip.exe<CR><CR>"},
+    ["<F5>"] = { ":w !clip.exe<CR><CR>" },
     -- ["<esc>"] = false,
   },
   t = {
